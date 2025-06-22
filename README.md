@@ -1,35 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BKLOVESRECS Landing Page
 
-## Getting Started
+This is the official landing page for the music label BKLOVESRECS. It's a simple, link-tree style page built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
-First, run the development server:
+## ✨ Features
+
+- **Dynamic Link Management**: Easily add, edit, or remove links from a central file.
+- **URL Redirects**: Clean, shareable URLs (e.g., `your-site.com/releases`) that redirect to external sites.
+- **System-Aware Dark Mode**: The site automatically adapts to the user's system-level light or dark theme.
+- **Custom Font**: Uses the [Manrope](https://fonts.google.com/specimen/Manrope) font via `next/font`.
+- **Responsive Design**: Looks great on both desktop and mobile devices.
+
+## 🚀 Getting Started
+
+First, clone the repository and install the dependencies:
+
+```bash
+git clone <repository-url>
+cd bklovesrecs_website
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔗 How to Update Links
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All links and their corresponding redirects are managed in one place: `src/lib/links.ts`.
 
-## Learn More
+To add, remove, or edit a button and its redirect, simply modify the `links` array in that file.
 
-To learn more about Next.js, take a look at the following resources:
+```typescript
+// src/lib/links.ts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+export interface LinkInfo {
+  // The text is used for the button text
+  text: string;
+  // The short text is used for the URL path (e.g., /releases)
+  shortText: string;
+  // The href is the full external URL the button and redirect will point to
+  href: string;
+}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+// Add or remove objects from this array to update the page
+export const links: LinkInfo[] = [
+  {
+    text: "Releases",
+    shortText: "releases",
+    href: "https://example.com/releases",
+  },
+  // ... more links
+];
+```
 
-## Deploy on Vercel
+After updating `next.config.ts` will automatically use this array to create the redirects. You may need to **restart the development server** for redirect changes to take effect.
+
+## ▲ Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 

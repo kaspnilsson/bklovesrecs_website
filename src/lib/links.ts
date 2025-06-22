@@ -20,8 +20,8 @@ export const links: LinkInfo[] = [
     href: "https://linktr.ee/bklovesrecs",
   },
   {
-    text: "Contact",
-    shortText: "contact",
+    text: "Submit a demo",
+    shortText: "submit",
     // TODO: Replace with actual contact page
     href: "https://www.instagram.com/bklovesrecs/",
   },
