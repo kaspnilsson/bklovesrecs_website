@@ -58,9 +58,3 @@ export const links: LinkInfo[] = [
 ```
 
 After updating `next.config.ts` will automatically use this array to create the redirects. You may need to **restart the development server** for redirect changes to take effect.
-
-## ▲ Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
