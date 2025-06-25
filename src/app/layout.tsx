@@ -14,7 +14,18 @@ export const metadata: Metadata = {
   title: "BKLOVESRECS",
   description: "BKLOVESRECS",
   icons: {
-    icon: "/bk-recs-logo-dark.svg",
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/bk-recs-logo-light.png",
+        href: "/bk-recs-logo-light.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/bk-recs-logo-dark.png",
+        href: "/bk-recs-logo-dark.png",
+      },
+    ],
   },
 };
 
