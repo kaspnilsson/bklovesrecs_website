@@ -10,20 +10,14 @@ export interface LinkInfo {
 // Order is the order of the buttons
 export const links: LinkInfo[] = [
   {
-    text: "Releases",
-    shortText: "releases",
-    href: "https://soundcloud.com/bk-loves-recs/sets/bk-loves-recs-releases",
-  },
-  {
     text: "Links",
     shortText: "links",
     href: "https://linktr.ee/bklovesrecs",
   },
   {
-    text: "Submit a demo",
-    shortText: "submit",
-    // TODO: Replace with actual contact page
-    href: "https://www.instagram.com/bklovesrecs/",
+    text: "Releases",
+    shortText: "releases",
+    href: "https://soundcloud.com/bk-loves-recs/sets/bk-loves-recs-releases",
   },
   {
     text: "Instagram",
@@ -34,5 +28,10 @@ export const links: LinkInfo[] = [
     text: "Discord",
     shortText: "discord",
     href: "https://discord.gg/umxmvfVG9Z",
+  },
+  {
+    text: "Submit a demo",
+    shortText: "submit",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSdVEZwK2s_KtMZ8ZRHTv6p8BixoLfOWMkoGDbxIS2u_z7e7JA/viewform",
   },
 ];
